@@ -48,10 +48,6 @@ def handle_message(event):
         TextSendMessage(text=event.message.text))
 
 
-if __name__ == "__main__":
-    app.run()
-
-
 #
 # @handler.add(MessageEvent, message=TextMessage)
 # def response_message(event):
@@ -83,7 +79,7 @@ if __name__ == "__main__":
 #
 #     line_bot_api.reply_message(event.reply_token, messages=messages)
 #
-#
-# if __name__ == "__main__":
-#     port = int(os.getenv("PORT", 5000))
-#     app.run(host="0.0.0.0", port=port)
+
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
