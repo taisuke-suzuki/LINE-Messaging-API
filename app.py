@@ -48,6 +48,10 @@ def response_message(event):
     if event.reply_token == "00000000000000000000000000000000":
         return
 
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=event.message.text))
+
     # notesのCarouselColumnの各値は、変更してもらって結構です。
     notes = [CarouselColumn(thumbnail_image_url="https://renttle.jp/static/img/renttle02.jpg",
                             title="【ReleaseNote】トークルームを実装しました。",
