@@ -12,12 +12,14 @@ from linebot.models import (
 
 app = Flask(__name__)
 
-LINE_CHANNEL_ACCESS_TOKEN = os.environ["qP7rW14ZmINiO1l93FndzOLvCQEPh8mGKQ1xlfMIyqT8OUbRJLbUDddKJaMI23x7d/Gtd8ejp7dmrUD3ACABoM+U9bg39UjQizpnmxvR2Rld2E1a4itopz2WIwe2j+kB8ZgMI04fT3LXdX3wrx4mFwdB04t89/1O/w1cDnyilFU="]
-LINE_CHANNEL_SECRET = os.environ["96805edc4dd3a51ee20dc515e8edc405"]
+# LINE_CHANNEL_ACCESS_TOKEN = os.environ["qP7rW14ZmINiO1l93FndzOLvCQEPh8mGKQ1xlfMIyqT8OUbRJLbUDddKJaMI23x7d/Gtd8ejp7dmrUD3ACABoM+U9bg39UjQizpnmxvR2Rld2E1a4itopz2WIwe2j+kB8ZgMI04fT3LXdX3wrx4mFwdB04t89/1O/w1cDnyilFU="]
+# LINE_CHANNEL_SECRET = os.environ["96805edc4dd3a51ee20dc515e8edc405"]
+#
+# line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
+# handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
-line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
-handler = WebhookHandler(LINE_CHANNEL_SECRET)
-
+line_bot_api = LineBotApi("qP7rW14ZmINiO1l93FndzOLvCQEPh8mGKQ1xlfMIyqT8OUbRJLbUDddKJaMI23x7d/Gtd8ejp7dmrUD3ACABoM+U9bg39UjQizpnmxvR2Rld2E1a4itopz2WIwe2j+kB8ZgMI04fT3LXdX3wrx4mFwdB04t89/1O/w1cDnyilFU=")
+handler = WebhookHandler("96805edc4dd3a51ee20dc515e8edc405")
 
 @app.route("/")
 def index():
