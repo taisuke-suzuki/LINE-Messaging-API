@@ -53,7 +53,8 @@ def response_message(event):
                                    template=ButtonsTemplate(
                                        thumbnail_image_url=profile.picture_url,
                                        title=profile.display_name,
-                                       text="お前の見元はばればれだ！"))
+                                       text="お前の見元はばればれだ！",
+                                       actions=[MessageAction(label="成功", text="次は何を実装しましょうか？")]))
 
 # おうむがえし
 #     line_bot_api.reply_message(
